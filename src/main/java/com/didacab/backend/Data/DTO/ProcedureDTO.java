@@ -10,7 +10,6 @@ import lombok.Setter;
 public class ProcedureDTO {
 
     private double price;
-    //  private int id;
     private int duration;
     private String name;
 
@@ -18,6 +17,5 @@ public class ProcedureDTO {
         this.name = name;
         this.duration = duration;
         this.price = price;
-        //  this.id = getId(); // Ou outra lógica para definir o ID, se necessário
     }
 }

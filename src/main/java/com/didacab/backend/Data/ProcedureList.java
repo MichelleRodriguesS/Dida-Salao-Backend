@@ -26,4 +26,3 @@ public enum ProcedureList {
     private final double price;
     private final int id;
 }
-
