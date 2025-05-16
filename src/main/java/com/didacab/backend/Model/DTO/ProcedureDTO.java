@@ -1,4 +1,4 @@
-package com.didacab.backend.Data.DTO;
+package com.didacab.backend.Model.DTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
