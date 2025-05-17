@@ -12,7 +12,8 @@ import java.util.List;
 @RequiredArgsConstructor
 @Service
 public class AppointmentService {
-    private final AppointmentRepository repository;
+
+     AppointmentRepository repository;
 
     public AppointmentResponseDTO create(AppointmentRequestDTO dto) {
         Appointment appointment = Appointment.builder()
@@ -45,7 +46,3 @@ public class AppointmentService {
                 .toList();
     }
 }
-
-
-
-
