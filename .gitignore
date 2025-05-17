@@ -5,6 +5,7 @@ bin/
 
 # Gradle
 .gradle/
+
 !gradle/wrapper/gradle-wrapper.jar
 
 # IntelliJ IDEA
