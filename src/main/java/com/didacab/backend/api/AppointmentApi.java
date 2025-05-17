@@ -10,19 +10,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
 
-@RestController("/appointment")
+@RestController
 public class AppointmentApi {
     @Autowired
     AppointmentService appointmentService;
 
-    @PostMapping("/save")
+    @PostMapping("/scheduling-save")
     public ResponseEntity<AppointmentResponseDTO> create(@RequestBody AppointmentRequestDTO dto) {
         return ResponseEntity.ok(appointmentService.create(dto));
     }
 
-    @GetMapping("/find")
+    @GetMapping("/schedule-find")
     public String getAll() {
         return ("Hello World!");
     }

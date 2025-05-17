@@ -4,6 +4,7 @@ import com.didacab.backend.model.dto.AppointmentRequestDTO;
 import com.didacab.backend.model.dto.AppointmentResponseDTO;
 import com.didacab.backend.model.entity.Appointment;
 import com.didacab.backend.repository.AppointmentRepository;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +14,7 @@ import java.util.List;
 @Service
 public class AppointmentService {
 
-    private final AppointmentRepository repository;
+    AppointmentRepository appointmentRepository;
 
     public AppointmentResponseDTO create(AppointmentRequestDTO dto) {
         Appointment appointment = Appointment.builder()
@@ -23,7 +24,7 @@ public class AppointmentService {
                 .durationInMinutes(dto.procedure().getDuration())
                 .build();
 
-        Appointment saved = repository.save(appointment);
+        Appointment saved = appointmentRepository.save(appointment);
 
         return new AppointmentResponseDTO(
                 saved.getId(),
@@ -35,7 +36,7 @@ public class AppointmentService {
     }
 
     public List<AppointmentResponseDTO> getAll() {
-        return repository.findAll().stream()
+        return appointmentRepository.findAll().stream()
                 .map(a -> new AppointmentResponseDTO(
                         a.getId(),
                         a.getDate(),

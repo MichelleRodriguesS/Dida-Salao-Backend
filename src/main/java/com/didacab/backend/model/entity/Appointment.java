@@ -10,6 +10,8 @@ import java.time.LocalTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Getter
+@Setter
 public class Appointment {
 
     @Id
@@ -24,4 +26,5 @@ public class Appointment {
 
     @Enumerated(EnumType.STRING)
     private ProcedureList procedure;
+
 }
