@@ -1,9 +1,9 @@
-package com.didacab.backend.Service;
+package com.didacab.backend.service;
 
-import com.didacab.backend.Model.DTO.AppointmentRequestDTO;
-import com.didacab.backend.Model.DTO.AppointmentResponseDTO;
-import com.didacab.backend.Model.Entity.Appointment;
-import com.didacab.backend.Repository.AppointmentRepository;
+import com.didacab.backend.model.dto.AppointmentRequestDTO;
+import com.didacab.backend.model.dto.AppointmentResponseDTO;
+import com.didacab.backend.model.entity.Appointment;
+import com.didacab.backend.repository.AppointmentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +12,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @Service
 public class AppointmentService {
+
     private final AppointmentRepository repository;
 
     public AppointmentResponseDTO create(AppointmentRequestDTO dto) {
@@ -45,7 +46,3 @@ public class AppointmentService {
                 .toList();
     }
 }
-
-
-
-

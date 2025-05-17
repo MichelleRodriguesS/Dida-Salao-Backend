@@ -1,4 +1,4 @@
-package com.didacab.backend.Model;
+package com.didacab.backend.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

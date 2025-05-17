@@ -1,13 +1,12 @@
-package com.didacab.backend.Model.Entity;
+package com.didacab.backend.model.entity;
 
-import com.didacab.backend.Model.ProcedureList;
+import com.didacab.backend.model.ProcedureList;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Entity
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder

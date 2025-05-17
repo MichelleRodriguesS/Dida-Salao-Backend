@@ -1,6 +1,6 @@
-package com.didacab.backend.Model.DTO;
+package com.didacab.backend.model.dto;
 
-import com.didacab.backend.Model.ProcedureList;
+import com.didacab.backend.model.ProcedureList;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

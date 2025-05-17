@@ -1,6 +1,6 @@
-package com.didacab.backend.Repository;
+package com.didacab.backend.repository;
 
-import com.didacab.backend.Model.Entity.Appointment;
+import com.didacab.backend.model.entity.Appointment;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -8,5 +8,3 @@ import org.springframework.stereotype.Repository;
 public interface AppointmentRepository extends JpaRepository<Appointment, Long> {
 
 }
-
-

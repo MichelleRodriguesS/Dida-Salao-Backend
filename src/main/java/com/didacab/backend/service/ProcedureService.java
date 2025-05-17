@@ -1,7 +1,7 @@
-package com.didacab.backend.Service;
+package com.didacab.backend.service;
 
-import com.didacab.backend.Model.DTO.ProcedureDTO;
-import com.didacab.backend.Model.ProcedureList;
+import com.didacab.backend.model.dto.ProcedureDTO;
+import com.didacab.backend.model.ProcedureList;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
