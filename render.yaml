@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: dida-server-site
+    env: java
+    buildCommand: ./mvnw package
+    startCommand: java -jar target/seu-projeto.jar
+    envVars:
+      - key: JAVA_VERSION
+        value: 17
