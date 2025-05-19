@@ -3,12 +3,8 @@
 out/
 bin/
 
-# Arquivo de configuração do Spring Boot
-src/main/resources/aplication.yml
-
 # Gradle
 .gradle/
-
 !gradle/wrapper/gradle-wrapper.jar
 
 # IntelliJ IDEA
