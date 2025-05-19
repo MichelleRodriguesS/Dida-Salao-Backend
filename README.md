@@ -16,48 +16,12 @@ Este é um sistema de agendamento de serviços para o salão de cabeleireira "Di
 
 ---
 
-## ⚙️ Configuração Inicial
-
-### 1. Clonar o repositório
+## 📥 Como clonar o repositório
 
 ```bash
 git clone https://github.com/MichelleRodriguesS/Dida-Salao-Backend.git
 cd Dida-Salao-Backend
 ````
-
-### 2. Configurar o banco de dados
-
-> O projeto utiliza o Neon (PostgreSQL gerenciado na nuvem). Você precisa configurar as credenciais de acesso no arquivo de configuração.
-
-#### Caminho do arquivo:
-
-```
-src/main/resources/
-```
-
-#### Passos:
-
-* Renomeie o arquivo `application_base.yml` para `application.yml`
-* Substitua `SENHA_AQUI` pela senha real fornecida pela Neon
-* Exemplo de `application.yml`:
-
-```yaml
-spring:
-  datasource:
-    url: jdbc:postgresql://<url-do-neon>/<nome-do-banco>?sslmode=require
-    driver-class-name: org.postgresql.Driver
-    username: <seu-usuario>
-    password: <sua-senha>
-
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-```
-
 ---
 
 ## ▶ Como executar o projeto
@@ -123,5 +87,3 @@ Contribuições são bem-vindas! Para sugestões ou melhorias, abra uma issue ou
 Este projeto é acadêmico e de uso interno, sem fins comerciais. Disponível para fins de estudo e melhoria.
 
 ```
-
----
