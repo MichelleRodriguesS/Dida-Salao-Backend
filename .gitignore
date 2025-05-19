@@ -1,3 +1,33 @@
+# Build e compilação
+/build/
+out/
+bin/
+
+# Gradle
 .gradle/
-.gradle/**/build/
-.gradle/**/caches/
+
+!gradle/wrapper/gradle-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse (caso tenha usado em algum momento)
+.project
+.classpath
+.settings/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Arquivos temporários e de swap do editor
+*.tmp
+*.swp
+*.swo
+
+# Configs locais
+.vscode/
