@@ -21,8 +21,8 @@ Este é um sistema de agendamento de serviços para o salão de cabeleireira "Di
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/dida-salao-backend.git
-cd dida-salao-backend
+git clone https://github.com/MichelleRodriguesS/Dida-Salao-Backend.git
+cd Dida-Salao-Backend
 ````
 
 ### 2. Configurar o banco de dados
