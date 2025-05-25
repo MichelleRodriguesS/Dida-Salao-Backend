@@ -22,7 +22,8 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	// Banco de dados
-	implementation("org.postgresql:postgresql:42.7.3")
+
+	implementation("org.postgresql:postgresql:42.5.4")
 	// Lombok
 	compileOnly("org.projectlombok:lombok:1.18.30")
 	annotationProcessor("org.projectlombok:lombok:1.18.30")
@@ -30,7 +31,6 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
-
 
 tasks.withType<Test> {
 	useJUnitPlatform()

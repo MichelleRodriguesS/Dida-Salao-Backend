@@ -1,7 +1,6 @@
 spring:
   datasource:
     url: jdbc:postgresql://ep-withered-butterfly-a850paz4-pooler.eastus2.azure.neon.tech/neondb?sslmode=require
-    driver-class-name: org.postgresql.Driver
     username: neondb_owner
     password: npg_wDexbsk5fo9E
   jpa:
