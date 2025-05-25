@@ -6,7 +6,6 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 
-
 public record AppointmentRequestDTO(
         Long clientId,
         LocalDate date,

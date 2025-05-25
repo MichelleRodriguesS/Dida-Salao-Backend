@@ -16,12 +16,15 @@ import java.util.List;
 @Service
 public class AppointmentService {
 
-    AppointmentRepository appointmentRepository;
-    ClientRepository clientRepository;
+    private final AppointmentRepository appointmentRepository;
+    private final ClientRepository clientRepository;
 
     public AppointmentResponseDTO create(AppointmentRequestDTO dto) {
+        Client client = clientRepository.findById(dto.clientId())
+                .orElseThrow(() -> new RuntimeException("Cliente não encontrado"));
+
         Appointment appointment = Appointment.builder()
-                .clientId(dto.clientId())
+                .client(client)
                 .date(dto.date())
                 .time(dto.time())
                 .procedure(dto.procedure())
@@ -31,8 +34,8 @@ public class AppointmentService {
         Appointment saved = appointmentRepository.save(appointment);
 
         return new AppointmentResponseDTO(
-                saved.getClientId(),
                 saved.getId(),
+                saved.getClient().getId(),
                 saved.getDate(),
                 saved.getTime(),
                 saved.getDurationInMinutes(),
@@ -43,21 +46,8 @@ public class AppointmentService {
     public List<AppointmentResponseDTO> getAll() {
         return appointmentRepository.findAll().stream()
                 .map(a -> new AppointmentResponseDTO(
-                        a.getClientId(),
                         a.getId(),
-                        a.getDate(),
-                        a.getTime(),
-                        a.getDurationInMinutes(),
-                        a.getProcedure()
-                ))
-                .toList();
-    }
-
-    public List<AppointmentResponseDTO> findByClientId(Long clientId) {
-        return appointmentRepository.findByClientId(clientId).stream()
-                .map(a -> new AppointmentResponseDTO(
-                        a.getId(),
-                        a.getClientId(),
+                        a.getClient().getId(),
                         a.getDate(),
                         a.getTime(),
                         a.getDurationInMinutes(),
@@ -87,4 +77,18 @@ public class AppointmentService {
                 appointments
         );
     }
+
+    public List<AppointmentResponseDTO> findByClientId(Long clientId) {
+        return appointmentRepository.findByClientId(clientId).stream()
+                .map(a -> new AppointmentResponseDTO(
+                        a.getId(),
+                        a.getClient().getId(),
+                        a.getDate(),
+                        a.getTime(),
+                        a.getDurationInMinutes(),
+                        a.getProcedure()
+                ))
+                .toList();
+    }
+
 }

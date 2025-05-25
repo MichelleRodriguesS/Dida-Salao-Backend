@@ -18,7 +18,6 @@ public class Appointment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long clientId;
     private LocalDate date;
     private LocalTime time;
     private int durationInMinutes;
