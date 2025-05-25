@@ -8,6 +8,7 @@ import java.time.LocalTime;
 
 
 public record AppointmentRequestDTO(
+        Long clientId,
         LocalDate date,
         LocalTime time,
         ProcedureList procedure

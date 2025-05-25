@@ -5,10 +5,9 @@ import com.didacab.backend.model.dto.AppointmentResponseDTO;
 import com.didacab.backend.service.AppointmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 @RestController
@@ -20,9 +19,9 @@ public class AppointmentApi {
     public ResponseEntity<AppointmentResponseDTO> create(@RequestBody AppointmentRequestDTO dto) {
         return ResponseEntity.ok(appointmentService.create(dto));
     }
-
-    @GetMapping("/schedule-find")
-    public String getAll() {
-        return ("Hello World!");
+    @GetMapping("/schedule-find/{clientId}")
+    public ResponseEntity<List<AppointmentResponseDTO>> findByClientId(@PathVariable Long clientId) {
+        return ResponseEntity.ok(appointmentService.findByClientId(clientId));
     }
+
 }
